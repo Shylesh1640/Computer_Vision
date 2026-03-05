@@ -10,7 +10,7 @@ contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_S
 
 for cnt in contours:
     if cv2.contourArea(cnt) > 200:
-        cv2/drawCounters(img, [cnt], -1, (0,255,0), 3)
+        cv2.drawContours(img, [cnt], -1, (0,255,0), 3)
     print(cv2.contourArea(cnt))
 
 #cv2.imshow('Original Image', img)
