@@ -10,8 +10,11 @@ contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_S
 
 for cnt in contours:
     if cv2.contourArea(cnt) > 200:
-        cv2.drawContours(img, [cnt], -1, (0,255,0), 3)
-    print(cv2.contourArea(cnt))
+        #cv2.drawContours(img, [cnt], -1, (0,255,0), 3)
+        x, y, w, h = cv2.boundingRect(cnt)
+        cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
+    
+    #print(cv2.contourArea(cnt))
 
 #cv2.imshow('Original Image', img)
 #cv2.imshow('Threshold Image', thresh)
