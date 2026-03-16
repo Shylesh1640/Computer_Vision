@@ -2,7 +2,7 @@ import cv2
 from PIL import Image
 from util import get_limits
 
-color = (255, 0, 0)  # Blue color in BGR
+color = (0, 0, 0)  # Black color in BGR
 cap = cv2.VideoCapture(0)
 
 while True:
