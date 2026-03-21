@@ -17,3 +17,4 @@ cv2.imshow('Gaussian Blurred Image', blurred2)
 cv2.imshow('Median Blurred Image', blurred3)
 cv2.waitKey(0)
 
+#pip install open cv
